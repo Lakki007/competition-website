@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Lakki - Selection Website</title>
+</head>
+
+<body>
+<div id="loading"></div>
+
+    <header>
+        <a href="/" class="logo">HPSB</a>
+        <div class="right">
+            <div class="btns dayNight">
+                <ion-icon name="moon-outline"></ion-icon>
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+            <div class="btns menuToggle">
+                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+
+    <ul class="navigation">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/legacy">Legacy</a></li>
+        <li><a href="/about" class="active">About</a></li>
+        <li><a href="/90-years-celebration" class="active">90 Years Celebrations</a></li>
+    </ul>
+
+    <section class="main">
+      <!-- Video source - YouTube -->
+        <!-- <video src="./videos/school-vid.mp4" autoplay muted loop type="mp4"></video> -->
+        <img src="./img/mask.jpg" class="mask">
+        <h2>THE HYDERABAD PUBLIC SCHOOL</h2>
+        <p class="text">© Lakki - 2021</p>
+        <ul class="sci">
+            <li><a href="https://twitter.com/Lakki_007">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li><a href="https://instagram.com/am_i_lakki">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+        </ul>
+    </section>
+    <!-- icons package -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Light & Dark Mode Logic -->
+    <script>
+        let menuToggle = document.querySelector('.menuToggle');
+        let dayNight = document.querySelector('.dayNight');
+        let body = document.querySelector('body');
+        let navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+        dayNight.onclick = function () {
+            dayNight.classList.toggle('active')
+            body.classList.toggle('dark')
+        }
+    </script>
+
+    <!-- Preloader -->
+        <script>
+            const preload = document.getElementById("loading");
+            window.onload = function () {
+              preload.style.display = "none";
+            }
+          </script>
+</body>
+
+</html>
